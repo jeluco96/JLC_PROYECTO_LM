@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - YisusToys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
+    
+    <script src="javascript1.js" defer> </script>
+    <script src="aos-master/dist/aos.js"> </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/ViaJesús (2).png" width="500" alt="Logo ViaJesús">
+        </div>
+        <nav>
+            <div class="hamburger">
+                <div class="_layer -top"></div>
+                <div class="_layer -mid"></div>
+                <div class="_layer -bottom"></div>
+            </div>
+            <nav class="menuppal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </nav>
+        <div id="user-icon-container" class="user-icon-container" style="display: none;">
+            <i class="fas fa-check-circle user-icon"></i>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="login-container" data-aos="fade-up">
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Usuario</label>
+                        <input type="email" id="username" name="username" placeholder="Introduce tu usuario" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+                    </div>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </section>
+        <section class="carousel-container" data-aos="fade-up">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/famobyl.png" alt="Juguete 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/madelman - copia.png" alt="Juguete 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/nenuco.png" alt="Juguete 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+        <section class="products-table" data-aos="fade-up">
+            <h2>Precios para todos los públicos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Famobyl</td>
+                        <td>Juguete parecido a los playmobil</td>
+                        <td>14.99€</td>
+                    </tr>
+                    <tr>
+                        <td>Modelman</td>
+                        <td>Clásico Modelman y todas sus profesiones</td>
+                        <td>19.99€</td>
+                    </tr>
+                    <tr>
+                        <td>Nenuco</td>
+                        <td>¿Quién no ha querido tener uno desde pequeño?</td>
+                        <td>89.99€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="video-section" data-aos="fade-up">
+            <h2>Video de Juguetes Antiguos</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/p-FDbY3kG5I?si=92q_dnavlSH9kMp2" frameborder="10" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="contact-form" data-aos="fade-up">
+            <h2>Contáctanos</h2>
+            <form action="https://formspree.io/f/mrgnvrzn" method="POST">
+                <div class="input-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 YisusToys. Casi Todos los derechos reservados. </p>
+    </footer>
+    <script>
+        AOS.init();
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
